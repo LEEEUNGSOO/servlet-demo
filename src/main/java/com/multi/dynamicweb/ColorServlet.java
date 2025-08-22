@@ -2,26 +2,29 @@ package com.multi.dynamicweb;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.http.*;
+import java.io.*;
 
 @WebServlet("/colorServlet")
 public class ColorServlet extends HttpServlet {
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-         PrintWriter pw= response.getWriter();
-         response.setCharacterEncoding("utf-8");
-         response.setContentType("text/html;charset=utf-8");
+    protected void service(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        // 1) 먼저 인코딩/타입 설정
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+        // 2) 그 다음 writer 얻기
+        PrintWriter pw = response.getWriter();
+
         String html =
                 "<!DOCTYPE html>" +
                         "<html lang='ko'>" +
                         "<head>" +
                         "<meta charset='UTF-8'>" +
-                        "<title>주간 시간표</title>" +
+                        "<title>안녕하세요</title>" +
                         "<style>" +
                         "body{font-family:Arial, sans-serif; margin:40px;}" +
                         "h1{margin-bottom:16px;}" +
@@ -39,18 +42,17 @@ public class ColorServlet extends HttpServlet {
                         "<tr><th class='time'>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr>" +
                         "</thead>" +
                         "<tbody>" +
-                        "<tr><td class='time'>09:00–10:00</td><td>Java</td><td>자료구조</td><td>웹기초</td><td>SQL</td><td>프로젝트</td></tr>" +
-                        "<tr><td class='time'>10:00–11:00</td><td>Java</td><td>자료구조</td><td>웹기초</td><td>SQL</td><td>프로젝트</td></tr>" +
-                        "<tr><td class='time'>11:00–12:00</td><td>알고리즘</td><td>HTML/CSS</td><td>Spring</td><td>JDBC</td><td>프로젝트</td></tr>" +
-                        "<tr class='lunch'><td class='time'>12:00–13:00</td><td colspan='5'>점심시간</td></tr>" +
-                        "<tr><td class='time'>13:00–14:00</td><td>Spring</td><td>MyBatis</td><td>React</td><td>REST API</td><td>프로젝트</td></tr>" +
-                        "<tr><td class='time'>14:00–15:00</td><td>Spring</td><td>MyBatis</td><td>React</td><td>REST API</td><td>프로젝트</td></tr>" +
+                        // 엔대시(–) 대신 하이픈(-) 사용!
+                        "<tr><td class='time'>09:00-10:00</td><td>Java</td><td>자료구조</td><td>웹기초</td><td>SQL</td><td>프로젝트</td></tr>" +
+                        "<tr><td class='time'>10:00-11:00</td><td>Java</td><td>자료구조</td><td>웹기초</td><td>SQL</td><td>프로젝트</td></tr>" +
+                        "<tr><td class='time'>11:00-12:00</td><td>알고리즘</td><td>HTML/CSS</td><td>Spring</td><td>JDBC</td><td>프로젝트</td></tr>" +
+                        "<tr class='lunch'><td class='time'>12:00-13:00</td><td colspan='5'>점심시간</td></tr>" +
+                        "<tr><td class='time'>13:00-14:00</td><td>Spring</td><td>MyBatis</td><td>React</td><td>REST API</td><td>프로젝트</td></tr>" +
+                        "<tr><td class='time'>14:00-15:00</td><td>Spring</td><td>MyBatis</td><td>React</td><td>REST API</td><td>프로젝트</td></tr>" +
                         "</tbody>" +
                         "</table>" +
                         "</body></html>";
-         pw.write(html);
+
+        pw.write(html);
     }
 }
-
-
-
