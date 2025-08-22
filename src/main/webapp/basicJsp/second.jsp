@@ -47,6 +47,24 @@
         %>
     </tr>
     </thead>
+    <tbody>
+    <%
+        for(int i=1;i<=9;i++){
+    %>
+     <tr>
+         <%
+             for(int j=2;j<=9;j++){
+         %>
+         <td><%=j%>*<%=i%>=<%=j*i%></td>
+         <%
+             }
+         %>
+     </tr>
+    <%
+        }
+    %>
+
+    </tbody>
 
 </table>
 
