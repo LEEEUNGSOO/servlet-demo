@@ -19,6 +19,7 @@ public class LifeCycleServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("service(req,resp) ");
         System.out.println(req);//요청
+        super.service(req, resp);
 
     }
 
