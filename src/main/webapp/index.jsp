@@ -8,7 +8,7 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="colorSevlet">colorSevlet</a>
+<a href="colorServlet">colorSevlet</a>
 <%--<a href="hello-servlet">Hello Servlet</a><br>--%>
 <%--<a href="lifeCycleServlet">"lifeCycleServlet"</a>--%>
 </body>
