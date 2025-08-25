@@ -11,6 +11,19 @@
     <title>Title</title>
 </head>
 <body>
+<%
+    request.setCharacterEncoding("utf-8");
+%>
+<%
+     String name= request.getParameter("name");
+     String email= request.getParameter("email");
+    String  pwd= request.getParameter("pwd");
+    String remember=request.getParameter("remember");
 
+%>
+Name:<%=name%>
+Email:<%=email%>
+Password:<%=pwd%>
+ReMember:<%=remember%>
 </body>
 </html>
