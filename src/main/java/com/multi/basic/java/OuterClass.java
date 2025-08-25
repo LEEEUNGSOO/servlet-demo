@@ -24,6 +24,7 @@ public class OuterClass {
     public static void main(String[] args) {
         //new InnerClass(); 내부 생성만 불가
         OuterClass.InnerClass inner = new OuterClass().new InnerClass();
+        inner.showInner();
 
     }
 
