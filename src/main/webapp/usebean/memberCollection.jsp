@@ -1,4 +1,5 @@
-<%@ page import="java.util.Enumeration" %><%--
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: sists
   Date: 2025-08-25
@@ -11,12 +12,27 @@
     <title>Title</title>
 </head>
 <body>
+<%--<%--%>
+<%--     Enumeration<String> enumeration= request.getParameterNames();--%>
+<%--     while (enumeration.hasMoreElements()){--%>
+<%--         String names=enumeration.nextElement();--%>
+<%--        System.out.println(names+":"+request.getParameter(names));--%>
+
+<%--     }--%>
+<%--%>--%>
+
 <%
-     Enumeration<String> enumeration= request.getParameterNames();
-     while (enumeration.hasMoreElements()){
-         String names=enumeration.nextElement();
-         System.out.println(names+":"+request.getParameter(names));
-     }
+    Map<String, String[]>map= request.getParameterMap();
+    for(String key :map.keySet()){
+        String []values=map.get(key);
+        System.out.print(key+"=");;
+        for(String v:values){
+            System.out.print(v+" ");
+        }//for
+        System.out.println();
+    }
+
 %>
+
 </body>
 </html>
