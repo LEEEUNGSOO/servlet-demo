@@ -6,8 +6,11 @@
   if ("POST".equalsIgnoreCase(request.getMethod())) {
     String username = request.getParameter("username");
     String password = request.getParameter("password");
+    //username이 admin이고 password가 1234이면
     if ("admin".equals(username) && "1234".equals(password)) {
-      session.setAttribute("user", username);
+      //로그인을 성공했을때... session에 username을 저장한다
+      session.setAttribute("user", username);//user가 session의 key ,username 은 value
+      //response는 응답객체이다 그래서 응답 객체안에 stream데이터 기반으로 welcoom.jsp로 이동한다
       response.sendRedirect("welcome.jsp");
       return;
     } else {

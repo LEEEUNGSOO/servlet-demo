@@ -3,7 +3,7 @@
 
 <%@ page session="true" %>
 <%
-  if (session.getAttribute("user") == null) {
+  if (session.getAttribute("user") == null) {//로그인이 안되어 있을 경우
     response.sendRedirect("login.jsp");
     return;
   }
