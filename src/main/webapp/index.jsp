@@ -5,10 +5,17 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<%
+    if (session.getAttribute("user") != null) {
+        response.sendRedirect("board/welcome.jsp");
+    } else {
+        response.sendRedirect("board/login.jsp");
+    }
+%>
+<%--<h1><%= "Hello World!" %>--%>
 </h1>
 <br/>
-<a href="colorServlet">colorSevlet</a>
+<%--<a href="colorServlet">colorSevlet</a>--%>
 <%--<a href="hello-servlet">Hello Servlet</a><br>--%>
 <%--<a href="lifeCycleServlet">"lifeCycleServlet"</a>--%>
 </body>
