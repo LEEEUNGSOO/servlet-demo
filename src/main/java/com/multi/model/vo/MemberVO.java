@@ -6,9 +6,9 @@ public class MemberVO {
     private  String password;
     private  String remember;
 
+    //useBean 사용시 기본 생성자 없으면 error
     public MemberVO() {
     }
-
     public MemberVO(String name, String email, String password, String remember) {
         this.name = name;
         this.email = email;
