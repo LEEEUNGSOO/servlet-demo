@@ -14,6 +14,7 @@
 </head>
 <body>
 Collection
+<h1>응답객체의 정보</h1>
 <%
     response.setHeader("content-length","120");
     response.setHeader("X-Debug","ok");
