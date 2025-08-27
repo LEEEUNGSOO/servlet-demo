@@ -12,6 +12,11 @@
 </head>
 <body>
 <h1>Sesson객체 </h1>
+<%
+    // request,response,pageContext (건물에 허락도 없이 잠시 머무는 상태의 객체)
+    // session 일정 시간동안 건물에 방을 빌린상태
+    //application(ServletContext) 건물전체
+%>
 session.getServletContext()=는 웹어플리케이션의 전체범위에 접근할때 사용하는 메소드
 <%=
     session.getServletContext()
