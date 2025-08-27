@@ -46,7 +46,7 @@
 
                 <div class="card-body">
                     <!-- action은 서버 경로에 맞게 바꾸세요 (예: /board/write) -->
-                    <form id="writeForm" class="needs-validation" action="#" method="post" enctype="multipart/form-data" novalidate>
+                    <form id="writeForm"  class="needs-validation" action="writeInsert.jsp" method="post"  novalidate>
 
                         <!-- 카테고리 -->
                         <div class="mb-3">
@@ -74,7 +74,7 @@
                         <div class="mb-3">
                             <label class="form-label">태그</label>
                             <div class="form-text mb-1">Enter를 눌러 태그를 추가하세요. (최대 10개)</div>
-                            <input id="tagInput" type="text" class="form-control" placeholder="예: Spring, JSP, WebSocket" />
+                            <input id="tagInput" type="text" name="tagInput" class="form-control" placeholder="예: Spring, JSP, WebSocket" />
                             <div id="tags" class="mt-2"></div>
                             <!-- 서버로 보낼 숨김 input (쉼표 구분) -->
                             <input type="hidden" name="tags" id="tagsHidden" />
