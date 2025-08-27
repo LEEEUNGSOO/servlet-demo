@@ -14,7 +14,7 @@
 
 %>
 <%---MemberVO bean=new MemberVO() --%>
-<jsp:useBean id="bean" class="com.multi.model.vo.MemberVO" scope="page"/>
+<jsp:useBean id="bean" class="com.multi.model.vo.MemberVO" scope="request"/>
 <%--<jsp:setProperty name="bean" property="email"/>--%>
 <%--<jsp:setProperty name="bean" property="name"/>--%>
 <jsp:setProperty name="bean" property="*"/>

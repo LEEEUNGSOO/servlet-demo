@@ -9,7 +9,7 @@
 <%
     request.setCharacterEncoding("UTF-8");
 %>
-<jsp:useBean id="bean" type="com.multi.model.vo.WriteVO" scope="request"/>
+<jsp:useBean id="bean" class="com.multi.model.vo.WriteVO" scope="request" />
 <jsp:setProperty name="bean" property="*"/>
 <html>
 <head>

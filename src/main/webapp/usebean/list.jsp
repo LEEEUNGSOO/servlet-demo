@@ -13,5 +13,7 @@
 <body>
 <h1>LIST PAGE</h1>
 request.getAttribute("bean")=<%=request.getAttribute("bean")%><br>
+session.getAttribute("bean")=<%=session.getAttribute("bean")%><br>
+application.getAttribute("bean")=<%=application.getAttribute("bean")%><br>
 </body>
 </html>
