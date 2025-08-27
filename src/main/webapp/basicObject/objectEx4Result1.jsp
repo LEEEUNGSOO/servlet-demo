@@ -14,6 +14,8 @@
 <%
     String data=request.getParameter("data");
     request.setAttribute("data",data);
+    session.setAttribute("data",data);
+    application.setAttribute("data",data);
 %>
 <h1><a href="objectEx4Result2.jsp"> Data=<%=data%></a></h1>
 
