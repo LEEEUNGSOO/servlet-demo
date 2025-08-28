@@ -14,7 +14,9 @@
 <%
     String id=request.getParameter("id");
     String checker=request.getParameter("checker");
-    out.println(id+" "+checker);
+   Cookie cookie=new Cookie("id",id);
+   cookie.setMaxAge(checker.equals("on")?60:0);
+   response.addCookie(cookie);
 %>
 
 </body>
