@@ -26,7 +26,11 @@
             crossorigin="anonymous"></script>
 
         <script>
+         function show(id){
+             $("input#checker").prop("checked",id.length!=0);
+         }
         $(function(){
+
             $("img[title='LOGIN']").click(function(){
                 $("form").submit();
             });
@@ -36,7 +40,7 @@
 
     <link href="../css/contents.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body onload="show('<%=id%>')">
 <form name="login" method="post" action="cooklogprocess.jsp" >
     <div id="loginWrapper">
         <div class="loginForm">
@@ -53,7 +57,7 @@
                     <img  id="btnSubmit" src="../img/button/btn_login.gif" alt="LOGIN" title="LOGIN"  />
                 </div>
 
-                <div class="saveId"><input type="checkbox" id="checker" name="checker" />
+                <div class="saveId"> <input type="checkbox" id="checker" name="checker" />
                     <img src="../img/common/save_id.gif" alt="아이디 저장" />
                 </div>
             </fieldset>
