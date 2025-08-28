@@ -19,6 +19,7 @@
                 }
             }
         }
+        request.setAttribute("id",id);//el을 사용하기 위해 저장합니다
     %>
     <script
             src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -26,11 +27,9 @@
             crossorigin="anonymous"></script>
 
         <script>
-         function show(id){
-
-         }
         $(function(){//onload
-            $("input#checker").prop("checked",<%=id.length()!=0%>);
+            //$("input#checker").prop("checked",<%=id.length()!=0%>);
+            $("input#checker").prop("checked",${id.length()!=0});//el로변경
             $("img[title='LOGIN']").click(function(){
                 $("form").submit();
             });
