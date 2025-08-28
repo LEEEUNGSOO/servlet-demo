@@ -27,10 +27,10 @@
 
         <script>
          function show(id){
-             $("input#checker").prop("checked",id.length!=0);
-         }
-        $(function(){
 
+         }
+        $(function(){//onload
+            $("input#checker").prop("checked",<%=id.length()!=0%>);
             $("img[title='LOGIN']").click(function(){
                 $("form").submit();
             });
@@ -40,7 +40,7 @@
 
     <link href="../css/contents.css" rel="stylesheet" type="text/css" />
 </head>
-<body onload="show('<%=id%>')">
+<body >
 <form name="login" method="post" action="cooklogprocess.jsp" >
     <div id="loginWrapper">
         <div class="loginForm">
