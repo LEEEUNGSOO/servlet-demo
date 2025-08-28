@@ -9,7 +9,14 @@
 <%
     request.setCharacterEncoding("UTF-8");
 %>
-<jsp:useBean id="bean" class="com.multi.model.vo.WriteVO" scope="request" />
+<jsp:useBean id="bean" class="com.multi.model.vo.WriteVO" scope="application" />
+
+<%--<%--%>
+<%--    application.setAttribute("bean",bean);--%>
+<%--    session.setAttribute("bean",bean);--%>
+<%--    session.getAttribute("bean");--%>
+<%--    application.getAttribute("bean");--%>
+<%--%>--%>
 <jsp:setProperty name="bean" property="*"/>
 <html>
 <head>
