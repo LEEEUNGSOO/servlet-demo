@@ -8,10 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <meta http-equiv="imagetoolbar" content="no" />
     <link href="../css/contents.css" rel="stylesheet" type="text/css" />
+
 <%
   String id=(String) session.getAttribute("id");
   if(id==null||id.equals(""))response.sendRedirect("login.jsp");
 %>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"/>
+    <script>
+        $(function(){
+              // $("img[alt='로그아웃']").click(function(){
+              //     alert('tt')
+              //     //document.location.href='logout.jsp';
+              // });
+        });
+    </script>
 </head>
 <body >
 <div id="wrapper">
@@ -22,7 +35,7 @@
                     <span class="fir">2025.05.17</span>
                     <span>13:30:22</span>
                     <span><em><%=id%>님</em> 좋은 하루 되세요</span>
-                    <a onclick="logoutProcess()" href="#" class="btnLogout"><img src="../img/common/btn_logout.gif"  alt="로그아웃" /></a>
+                    <a href="logout.jsp" class="btnLogout"><img src="../img/common/btn_logout.gif"  alt="로그아웃" /></a>
                 </div>
             </div>
         </div>
