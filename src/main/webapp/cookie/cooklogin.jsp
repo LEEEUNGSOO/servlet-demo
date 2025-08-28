@@ -8,6 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <meta http-equiv="imagetoolbar" content="no" />
     <meta name="copyright" />
+    <%
+        String id="";
+        //쿠키를 읽어오자...
+        Cookie []cookies=request.getCookies();
+        if(cookies!=null){
+            for (Cookie cook :cookies){
+                if(cook.getName().equals("id")){//내가만든 cookie객체의 이름은 id입니다
+                    id=cook.getValue();
+                }
+            }
+        }
+    %>
     <script
             src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -32,7 +44,7 @@
                 <legend>관리자 시스템 로그인</legend>
                 <dl>
                     <dt><img src="../img/common/th_id.gif" alt="아이디" /></dt>
-                    <dd><input type="text" name="id" class="text" id="user_id" /></dd>
+                    <dd><input type="text" name="id" class="text" id="user_id" value="<%=id%>" /></dd>
 
                     <dt><img src="../img/common/th_pw.gif" alt="비밀번호" /></dt>
                     <dd><input type="password" name="pass" class="text" id="user_passwd" /></dd>
