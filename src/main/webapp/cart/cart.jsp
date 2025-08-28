@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.util.*, com.multi.dto.Product" %>
 <%
-    HttpSession session = request.getSession();
+    //HttpSession session = request.getSession();
     List<Product> cart = (List<Product>) session.getAttribute("cart");
     if (cart == null) cart = new ArrayList<>();
 %>

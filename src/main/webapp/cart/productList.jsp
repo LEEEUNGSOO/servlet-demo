@@ -32,7 +32,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title"><%=p.getName()%></h5>
                     <p class="card-text"><%=p.getPrice()%> 원</p>
-                    <a href="../CartServlet?action=add&id=<%=p.getId()%>" class="btn btn-primary">장바구니 담기</a>
+                    <a href="<%=request.getContextPath()%>/CartServlet?action=add&id=<%=p.getId()%>" class="btn btn-primary">장바구니 담기</a>
                 </div>
             </div>
         </div>
