@@ -43,10 +43,10 @@
                 <legend>관리자 시스템 로그인</legend>
                 <dl>
                     <dt><img src="../img/common/th_id.gif" alt="아이디" /></dt>
-                    <dd><input type="text" name="id" class="text" id="user_id"  /></dd>
+                    <dd><input type="text" name="user_id" class="text" id="user_id"  /></dd>
 
                     <dt><img src="../img/common/th_pw.gif" alt="비밀번호" /></dt>
-                    <dd><input type="password" name="pass" class="text" id="user_passwd" /></dd>
+                    <dd><input type="password" name="user_passwd" class="text" id="user_passwd" /></dd>
                 </dl>
                 <div class="btn">
                     <img  id="btnSubmit" src="../img/button/btn_login.gif" alt="LOGIN" title="LOGIN"  />
