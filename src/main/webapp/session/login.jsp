@@ -13,10 +13,22 @@
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"></script>
     <script>
+        function clearFunction(){
+            $("input#user_id").val('');
+            $("input#user_passwd").val('');
+
+        }
         $(function(){
             $("img#btnSubmit").click(function(){
-                console.log(document);
-
+                //console.log(document);
+                console.log(document.getElementById("user_id").value);
+                console.log($("input#user_passwd").val());
+                if($("input#user_id").val().length==0||$("input#user_passwd").val().length==0){
+                    alert("id or pass Check~");
+                    clearFunction();
+                }else{
+                    $("form[name='login']").submit();
+                }
             });
         });
     </script>
@@ -31,7 +43,7 @@
                 <legend>관리자 시스템 로그인</legend>
                 <dl>
                     <dt><img src="../img/common/th_id.gif" alt="아이디" /></dt>
-                    <dd><input type="text" name="id" class="text" id="user_id" /></dd>
+                    <dd><input type="text" name="id" class="text" id="user_id"  /></dd>
 
                     <dt><img src="../img/common/th_pw.gif" alt="비밀번호" /></dt>
                     <dd><input type="password" name="pass" class="text" id="user_passwd" /></dd>
