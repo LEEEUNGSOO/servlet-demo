@@ -19,7 +19,6 @@ public class ActionForWard {
     public void setPath(String path) {
         this.path = path;
     }
-
     public boolean isRedirect() {
         return isRedirect;
     }
