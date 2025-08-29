@@ -20,6 +20,18 @@
     </script>
 </head>
 <body>
+<%
+    //쿠킨혹인
+    boolean showpopup=true;
+    Cookie[] cookies= request.getCookies();
+    if(cookies!=null){
+        for(Cookie c:cookies){
+            if("popupYN".equals(c.getName())&& "done".equals(c.getValue())){
+                showpopup=false;
+            }
+        }
+    }
+%>
 <h1>메인페이지</h1>
 </body>
 </html>
