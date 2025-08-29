@@ -17,7 +17,8 @@
     String name=request.getParameter("username");
     request.setAttribute("name",name);
     //response.sendRedirect("result.jsp");
-
+    //Jsp/Servlet에서  클라이언트 요청으로 서버내부에서 다른자원 (Jsp,Html,Servlet)전달하는 기능을
+    //forward를 하면 서버내부로 이동--->브라우저의 주소창은 변하지 않음 
     RequestDispatcher rd=request.getRequestDispatcher("result.jsp");
     rd.forward(request, response);
 %>
