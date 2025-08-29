@@ -7,10 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<%
+    request.setCharacterEncoding("UTF-8");
+    String name=request.getParameter("username");
+    request.setAttribute("name",name);
+    response.sendRedirect("result.jsp");
+%>
+
+</body>
 </html>

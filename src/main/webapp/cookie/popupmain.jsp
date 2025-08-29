@@ -34,7 +34,8 @@
 </body>
 <script>
     $(function(){// 로드상태
-        alert(${showpopup});
+        //alert(${showpopup});
+        if(${showpopup})
         window.open("popup.jsp","notice","width=400,height=400");
     });
 </script>

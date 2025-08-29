@@ -7,10 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h2>결과페이지(RESULT.JSP)</h2>
+<P>입력한이름:<B><%=request.getAttribute("name")%></B></P>
+</body>
 </html>

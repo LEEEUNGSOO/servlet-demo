@@ -7,10 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h2>이름입력</h2>
+<form action="process.jsp" method="post">
+    이름입력:<input type="text" name="username">
+    <input type="submit" value="확인">
+
+</form>
+</body>
 </html>
+
+

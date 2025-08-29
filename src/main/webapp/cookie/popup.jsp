@@ -20,6 +20,7 @@
                //쿠키저장
                var date=new Date();
                date.setTime(date.getTime()+(30*1000));//30초
+               //쿠키설정
                document.cookie="popupYN=done;path=/;expires"+date.toUTCString()+"/";
              }
              window.close();
