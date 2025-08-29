@@ -14,9 +14,9 @@ public class ActionFactory {
     public Action getAction(String cmd) {
         Action action = null;
         if(cmd.equals("write")) {
-            action = new WriteAction("list",true);
+            action = new WriteAction("list.do?cmd=list",true);
         }else if(cmd.equals("list")) {
-            action = new ListAction("view/mvclist.jsp",false);
+            action = new ListAction("view/mvclist.jsp",true);
         }
         return action;
     }

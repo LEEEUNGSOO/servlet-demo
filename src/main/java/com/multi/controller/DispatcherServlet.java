@@ -18,10 +18,10 @@ public class DispatcherServlet extends HttpServlet {
         Action action=ActionFactory.getInstance().getAction(cmd);//UpCasting
         ActionForWard actionForWard= action.execute(request, response);
         if(actionForWard!=null){
-            if(actionForWard.isRedirect()){//redirect
+            if(actionForWard.isRedirect()){//redirect (2번호출)
                 response.sendRedirect(actionForWard.getPath());
 
-            }else{
+            }else{//forward는 리소스를 얻기위해 내부적으로 한번 호출
                 RequestDispatcher dispatcher=request.getRequestDispatcher(actionForWard.getPath());
                 dispatcher.forward(request, response);
             }
