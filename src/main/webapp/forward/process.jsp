@@ -11,11 +11,15 @@
     <title>Title</title>
 </head>
 <body>
+<h2>process.jsp</h2>
 <%
     request.setCharacterEncoding("UTF-8");
     String name=request.getParameter("username");
     request.setAttribute("name",name);
-    response.sendRedirect("result.jsp");
+    //response.sendRedirect("result.jsp");
+
+    RequestDispatcher rd=request.getRequestDispatcher("result.jsp");
+    rd.forward(request, response);
 %>
 
 </body>
