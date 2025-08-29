@@ -13,13 +13,8 @@
             src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"></script>
-    <script>
-        $(function(){// 로드상태
-               window.open("popup.jsp","notice","width=400,height=400");
-        });
-    </script>
+
 </head>
-<body>
 <%
     //쿠킨혹인
     boolean showpopup=true;
@@ -31,7 +26,16 @@
             }
         }
     }
+    request.setAttribute("showpopup",showpopup);
 %>
+<body>
+
 <h1>메인페이지</h1>
 </body>
+<script>
+    $(function(){// 로드상태
+        alert(${showpopup});
+        window.open("popup.jsp","notice","width=400,height=400");
+    });
+</script>
 </html>
