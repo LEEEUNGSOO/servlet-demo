@@ -16,7 +16,13 @@
     <script>
       $(function(){
           $("button#close").click(function(){
-            alert('test')
+             if($("input#chk").is(":checked")){
+               //쿠키저장
+               var date=new Date();
+               date.setTime(date.getTime()+(30*1000));//30초
+               document.cookie="popupYN=done;path=/;expires"+date.toUTCString()+"/";
+             }
+             window.close();
           })
       });
     </script>
