@@ -1,5 +1,6 @@
 package com.multi.controller;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,17 @@ public class DispatcherServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         String cmd = request.getParameter("cmd");
         Action action=ActionFactory.getInstance().getAction(cmd);//UpCasting
-        
+        ActionForWard actionForWard= action.execute(request, response);
+        if(actionForWard!=null){
+            if(actionForWard.isRedirect()){//redirect
+                response.sendRedirect(actionForWard.getPath());
+
+            }else{
+                RequestDispatcher dispatcher=request.getRequestDispatcher(actionForWard.getPath());
+                dispatcher.forward(request, response);
+            }
+        }
+
 
     }
 }
