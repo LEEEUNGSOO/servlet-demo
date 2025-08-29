@@ -14,7 +14,8 @@ public class DispatcherServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         String cmd = request.getParameter("cmd");
-        System.out.println(cmd);
+        Action action=ActionFactory.getInstance().getAction(cmd);//UpCasting
+        
 
     }
 }
