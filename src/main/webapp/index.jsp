@@ -35,6 +35,6 @@ index.jsp는 Root경로에 보여진다
 처음에는 직접 코드를 구현해서 응용하세요...
 
  --%>
-<a href="list.do?cmd=list">list</a>
+<a href="list.do?cmd=list">list</a><%--여기를 누르면 DispathcerServlet의 service호출 %-->
 </body>
 </html>
