@@ -15,13 +15,13 @@ public class LoginProcessAction implements  Action{
     @Override
     public ActionForWard execute(HttpServletRequest request, HttpServletResponse response) {
         String id=request.getParameter("id");
-        String passwd=request.getParameter("passwd");
-        if(id.equals("admin")&&passwd.equals("1234")){//로그인 성공시....
+        String password=request.getParameter("password");
+        if(id.equals("admin")&&password.equals("1234")){//로그인 성공시....
             request.getSession().setAttribute("admin",id);
             request.getSession().setMaxInactiveInterval(60);//60초...
             //로그인 성공했을때....empList
-            path="list.do?cmd=list";
-            isRedirecct = true;
+            //path="list.do?cmd=list";
+            //isRedirecct = true;
 
         }
 
