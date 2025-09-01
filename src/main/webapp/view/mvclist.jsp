@@ -31,6 +31,8 @@ View에서 어쩔수 없이 들어가는 JavaCode부분은 El/JSTL로 대체한�
 
 
 ${arraylist}<%--EL사용--%>
+${list}<%--request.setAttribute("list",listVo") --%>
+<%--달러 브레이스 리스트는 request.getAttribute("list") --%>
 <div id="wrapper">
     <div id="header">
         <div class="topInfoWrap">
