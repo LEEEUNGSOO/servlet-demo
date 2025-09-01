@@ -16,6 +16,7 @@ public class ListAction  implements Action {
     public ActionForWard execute(HttpServletRequest request, HttpServletResponse response) {
         //BL수행
         System.out.println("ListAction execute");
+        request.setAttribute("arraylist", "Hello World");
 
         return new ActionForWard(path, isRedirect);
     }
