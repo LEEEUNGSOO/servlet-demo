@@ -26,9 +26,22 @@
 <%--        --%>
 <%--    }--%>
 <%--%>--%>
-<%--c:은 접두사를 의미한다 --%>
+<%--c:은 접두사를 의미한다 for each 반복문 --%>
 <c:forEach var="i" begin="1" end="10">
  <c:out value="Test"/>
 </c:forEach>
+<%-- if elsif --%>
+<c:set var="cnt" value="50"/>
+<c:if test="${cnt>=50}">
+  <h2>cnt>=50</h2>
+</c:if>
+<c:set var="num" value="10"/>
+<c:choose>
+    <c:when test="${num>=0 and num<=10}"><h1>num>=0 and num<=10</h1> </c:when>
+    <c:when test="${num>=11 and num<=20}"><h1>num>=11 and num<=20</h1> </c:when>
+    <c:when test="${num>=21 and num<=30}"><h1>num>=21 and num<=30</h1> </c:when>
+    <c:otherwise><h1>otherwiere</h1></c:otherwise><%--else상황을 의미합니다 --%>
+
+</c:choose>
 </body>
 </html>
