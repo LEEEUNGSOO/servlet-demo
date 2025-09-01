@@ -14,11 +14,6 @@ mvc로 로그인을 하겠습니다
    LoginAction에서 로그인을 db로 체크하고
 */
 
-
-
-
-
-
 @WebServlet("*.do")//MVC에서 대장 Controller
 public class DispatcherServlet extends HttpServlet {
     @Override
