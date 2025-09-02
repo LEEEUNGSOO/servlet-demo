@@ -34,10 +34,10 @@ public class UserController extends HttpServlet {//UserController는 UserService
                 showNewForm(request, response);
                 break;
             case "edit":
-               // showEditForm(request, response);
+                showEditForm(request, response);
                 break;
             case "delete":
-               // deleteUser(request, response);
+                deleteUser(request, response);
                 break;
             default:
                 listUsers(request, response);

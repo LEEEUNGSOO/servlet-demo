@@ -2,8 +2,6 @@ package com.multi.service;
 
 import com.multi.dao.UserDao;
 import com.multi.dao.UserDaoImp;
-import com.multi.dao.UserDaoJdbcImp;
-import com.multi.dao.UserDaoMybatisImp;
 import com.multi.model.User;
 
 import java.util.List;
@@ -35,6 +33,6 @@ public class UserServiceImp implements  UserService {
 
     @Override
     public List<User> getAllUsers() {
-        return List.of();
+        return userDao.getAllUsers();
     }
 }
