@@ -16,6 +16,12 @@ mvc로 로그인을 하겠습니다
 
 @WebServlet("*.do")//MVC에서 대장 Controller
 public class DispatcherServlet extends HttpServlet {
+    /*1.명렬줄의 인수를 받는다
+      2.명령의 대한 Action을 생성한다
+      3.해당 Action을 호출한다 (비즈니스 로직을 수행한다)
+      4.Action을 수행하고 ActionForWard를 return한다
+      5.redirect or forward 여부에 따라서 페이지 이동한다
+    */
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
