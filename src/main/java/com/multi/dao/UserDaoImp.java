@@ -10,11 +10,11 @@ public class UserDaoImp implements UserDao {
     @Override
     public void addUser(User user) {
         String sql = "INSERT INTO users (name, age) VALUES (?, ?)";
-        try (Connection conn = DBUtil.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = DBUtil.getConnection();//연결객체
+             PreparedStatement stmt = conn.prepareStatement(sql)) {// 운반하고 실행하는 객체
             stmt.setString(1, user.getName());
             stmt.setInt(2, user.getAge());
-            stmt.executeUpdate();
+            stmt.executeUpdate();//실제 db에서 dml작업이 수행됩니다..
         } catch (SQLException e) {
             e.printStackTrace();
         }
