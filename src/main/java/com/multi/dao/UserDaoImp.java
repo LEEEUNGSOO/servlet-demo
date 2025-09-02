@@ -4,7 +4,7 @@ import com.multi.util.DBUtil;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+//refactoring 결과는 그대로 유지하고 유지보수성,확장성 이런것들은 개선하는 개념
 public class UserDaoImp implements UserDao {
 
     @Override
