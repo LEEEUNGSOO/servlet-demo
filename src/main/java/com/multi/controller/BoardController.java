@@ -12,7 +12,11 @@ import java.io.IOException;
 public class BoardController  extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+       req.setCharacterEncoding("utf-8");
+       String action=req.getParameter("action");
+       if(action==null||action.equals("list")){
+           req.getRequestDispatcher("jsp/board/list.jsp").forward(req,resp);
+       }
     }
 
     @Override
