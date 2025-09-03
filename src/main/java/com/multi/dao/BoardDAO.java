@@ -6,9 +6,17 @@ import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
+//dao는 실제 db에가서 데이터를 가져오는 객체
 public class BoardDAO {
     public List<BoardDTO> getAllBoards() {
+        //MyBatisUtil.getSqlSessionFactory().openSession()는 mybatis객체를 의미한다
         try (SqlSession s = MyBatisUtil.getSqlSessionFactory().openSession()) {
+            //s가 mybatis객체이다
+            //여러분 객체은 데이터이다 기능을 갖고 있는 데이터를 객체라고한다
+//            "수박".eat();
+//            "태란".sleep();
+//            "승근".sleep();
+            //그러니까...  여기서 s는 sqlSession(dbconfig,sqlQuery)입니다
             return s.selectList("com.multi.dao.BoardDAO.getAllBoards");
         }
     }

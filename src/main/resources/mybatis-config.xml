@@ -23,5 +23,6 @@
 
     <mappers>
         <mapper resource="mybatis/mapper/BoardMapper.xml"/>
+
     </mappers>
 </configuration>

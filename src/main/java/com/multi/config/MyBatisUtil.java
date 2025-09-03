@@ -10,12 +10,18 @@ public class MyBatisUtil {
     private static SqlSessionFactory sqlSessionFactory;
     static {
         try {
+            //단지 reader객체를 생성한다  mybatis-config.xml을 읽어오는 객체를 생성
+            //mybatis-config.xml에는 db 정보와 sql 문서정보가 있다...
             Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
+            //sqlSessionFactory에는 db정보와 sql정보가 들어있는 상태로 sqlSesson생성
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         } catch (Exception e) {
             throw new RuntimeException("Error initializing SqlSessionFactory: " + e.getMessage(), e);
         }
     }
-    public static SqlSessionFactory getSqlSessionFactory() { return sqlSessionFactory; }
+    //SqlSession을 만드는 공장입니다...
+    public static SqlSessionFactory getSqlSessionFactory() {
+        return sqlSessionFactory;
+    }
 }
 
