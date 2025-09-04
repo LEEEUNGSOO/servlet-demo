@@ -41,6 +41,9 @@ public class ElJstlController extends HttpServlet {
             }
         else if(action!=null && action.equals("calc")){
             resp.sendRedirect(req.getContextPath() + "/eljstl/eljstl3.jsp");
+        }else if(action!=null && action.equals("function")){
+            req.getRequestDispatcher("eljstl/eljstl4.jsp").forward(req, resp);
+
         }
 
 
