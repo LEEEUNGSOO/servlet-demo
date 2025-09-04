@@ -14,10 +14,15 @@
 <%--private String content;--%>
 <%--private LocalDateTime createdAt;--%>
 <%--private LocalDateTime updatedAt;--%>
+<%--
+
+http://localhost:8080/jstlLesson?action=info
+ --%>
 <head>
     <title>Title</title>
 </head>
 <body>
+<%--  ${info.id}는 getId와 같은 형태 --%>
 <c:out value="id"/>: ${info.id}<br>
 <c:out value="title"/>: ${info.title}<br>
 <c:out value="content"/>: ${info.content}<br>

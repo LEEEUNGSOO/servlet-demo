@@ -12,6 +12,10 @@
 </head>
 <body>
 <h1>REDIRECT</h1>
+<%--
+ http://localhost:8080/jstlLesson?action=redirect
+ --%>
+
 <%=request.getAttribute("list")%>
 ${list}
 </body>

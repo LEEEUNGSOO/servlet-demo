@@ -25,6 +25,10 @@
 <%--private String content;--%>
 <%--private LocalDateTime createdAt;--%>
 <%--private LocalDateTime updatedAt;--%>
+
+<%--
+http://localhost:8080/jstlLesson?action=forward
+--%>
 <div class="container">
     <h2>Contextual Classes</h2>
     <p>Contextual classes can be used to color the table, table rows or table cells. The classes that can be used are: .table-primary, .table-success, .table-info, .table-warning, .table-danger, .table-active, .table-secondary, .table-light and .table-dark:</p>
