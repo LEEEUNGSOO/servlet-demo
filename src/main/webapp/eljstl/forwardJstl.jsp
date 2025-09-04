@@ -39,7 +39,8 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="i" items="${list}" varStatus="cnt">
+        <%-- forEach (반복문) --%>
+        <c:forEach var="i" items="${list}" varStatus="cnt" >
             <c:choose>
             <c:when test="${cnt.count mod 2 eq 0}">
             <tr>

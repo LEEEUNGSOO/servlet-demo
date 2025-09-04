@@ -1,6 +1,7 @@
 package com.multi.controller;
 
 import com.multi.dao.BoardDAO;
+import com.multi.dto.BoardDTO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 @WebServlet("/jstlLesson")
 public class ElJstlController extends HttpServlet {
@@ -23,6 +25,15 @@ public class ElJstlController extends HttpServlet {
             req.setAttribute("list",  boardDAO.getAllBoards());
             req.getRequestDispatcher("eljstl/forwardJstl.jsp").forward(req, resp);
 
+        }else if(action!=null&& action.equals("info")){
+//            private int id;
+//            private String title;
+//            private String content;
+//            private LocalDateTime createdAt;
+//            private LocalDateTime updatedAt;
+            req.setAttribute("info",  new BoardDTO(1,"hi",
+                     "hello",null,null));
+            req.getRequestDispatcher("eljstl/info.jsp").forward(req, resp);
         }
 
 
