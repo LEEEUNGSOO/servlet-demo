@@ -29,5 +29,24 @@ http://localhost:8080/jstlLesson?action=function (forward로 오게하세요)
 <p>StartsWith 'he' in 'hello'i: ${fn:startsWith('hello', 'he')}</p>
 <p>EndsWith 'lo' in 'hello': ${fn:endsWith('hello', 'lo')}</p>
 <p>IndexOf 'l' in 'hello': ${fn:indexOf('hello', 'l')}</p>
+
+
+<c:forTokens var="token" items="java,oop,spring" delims=",">
+    <p>${token}</p>
+</c:forTokens>
+<c:url value="eljstl1.jsp" var="pageUrl" />
+<a href="${pageUrl}">Link</a>
+<%--<%--%>
+<%--    response.sendRedirect();--%>
+<%--%>--%>
+<%--<c:redirect url="${pageUrl}"/> --%>
+
+<c:set var="uu" value="testServer"/>
+<c:url value="eljstlParam.jsp" var="pageUrl">
+    <c:param name="no" value="1"/>
+    <c:param name="job" value="${uu}"/>
+</c:url>
+<a href="${pageUrl}">Link</a>
+
 </body>
 </html>
