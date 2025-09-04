@@ -15,13 +15,13 @@ public class ElJstlController extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         String action = req.getParameter("action");
-
+        BoardDAO boardDAO = new BoardDAO();
         if(action!=null&& action.equals("redirect")) {//
-            BoardDAO boardDAO = new BoardDAO();
            req.setAttribute("list",  boardDAO.getAllBoards());
-           resp.sendRedirect(req.getContextPath() + "/jstl/redirectJstl.jsp");
+           resp.sendRedirect(req.getContextPath() + "/eljstl/redirectJstl.jsp");
         }else if(action!=null&& action.equals("forward")) {
-            req.getRequestDispatcher("jstl/forwardJstl.jsp").forward(req, resp);
+            req.setAttribute("list",  boardDAO.getAllBoards());
+            req.getRequestDispatcher("eljstl/forwardJstl.jsp").forward(req, resp);
 
         }
 
