@@ -25,7 +25,7 @@
         <thead id="thead">
 
         </thead>
-        <tbody>
+        <tbody id="tbody">
 
         </tbody>
     </table>
@@ -45,20 +45,26 @@
                 //console.log(data);
                 //console.log(data.no+" "+data.name+" "+data.age);
                 //console.log(data["no"]+" "+data["name"]+" "+data["age"]);
-                $("#thead").html("");
-                for(var key in data){
+                const first = Array.isArray(data) ? data[0] : data;
+                $("#thead").html("<tr></tr>");
+                for(var key in data){//
                     for( var j in data[key]) {
                         console.log(j);
+                        $("#thead tr").append("<td>"+j+"</td>");//
+                    }
+                    break;
+                }
+                //$("#thead").append("</tr>");
+                $.each(data,function(key,val){
+                   // console.log(key+" "+val);
+                    $("#tbody").append("<tr>");
+                    for(var i in val){
+                        //console.log(val[i]+"test");
+                        $("#tbody").append("<td>"+val[i]+"</td>");
 
                     }
-
-                }
-                // $.each(data,function(key,val){
-                //     console.log(key+" "+val);
-                //     for(var i in val){
-                //         console.log(val[i]);
-                //     }
-                // });
+                    $("#tbody").append("</tr>");
+                });
 
 
             },
