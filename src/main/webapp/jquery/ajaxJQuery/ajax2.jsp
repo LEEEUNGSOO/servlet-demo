@@ -6,14 +6,50 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Title</title>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<button id="btn1" value="Click">Click</button>
 
-<h1 id="h1"></h1>
+<div class="container">
+    <h2>Striped Rows</h2>
+    <p>The .table-striped class adds zebra-stripes to a table:</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
