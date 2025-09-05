@@ -10,10 +10,11 @@
 <html>
 <head>
     <title>Title</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         $(function(){//loadfunction
             $("#ajax").on('click', function(){
+                console.log('ajax Loading')
                 $("h1#ajax").html("Loading...");
                 $.ajax(
                     {
