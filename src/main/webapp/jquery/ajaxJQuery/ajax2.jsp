@@ -13,6 +13,7 @@
 <body>
 <button id="btn1" value="Click">Click</button>
 
+<h1 id="h1"></h1>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
