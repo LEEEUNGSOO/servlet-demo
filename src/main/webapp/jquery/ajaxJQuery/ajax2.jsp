@@ -18,34 +18,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-
-<div class="container">
-    <h2>Striped Rows</h2>
+<h2>Striped Rows</h2>
+<div class="container" >
     <p>The .table-striped class adds zebra-stripes to a table:</p>
     <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
-        </tr>
+        <thead id="thead">
+
         </thead>
         <tbody>
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-        </tr>
-        <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-        </tr>
-        <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-        </tr>
+
         </tbody>
     </table>
 </div>
@@ -61,9 +42,23 @@
             success:function(data){//Ajax통신 Success
                 //{"no":1,"name":"Spring","age":34}
 
-                console.log(data);
+                //console.log(data);
                 //console.log(data.no+" "+data.name+" "+data.age);
                 //console.log(data["no"]+" "+data["name"]+" "+data["age"]);
+                $("#thead").html("");
+                for(var key in data){
+                    for( var j in data[key]) {
+                        console.log(j);
+
+                    }
+
+                }
+                // $.each(data,function(key,val){
+                //     console.log(key+" "+val);
+                //     for(var i in val){
+                //         console.log(val[i]);
+                //     }
+                // });
 
 
             },
@@ -74,8 +69,10 @@
         });
     }
     $(function(){
-        $("button#btn1").click(function(){ //button을 click했을때... Event발생
-            ajaxProcess('userInfo.jsp','GET','json');
+        $("[class='container']").hide();
+        $("h2").click(function(){ //button을 click했을때... Event발생
+             ajaxProcess('userInfo.jsp','GET','json');
+            $("[class='container']").show().slideDown(1000).slideUp(1000).slideDown(1000);
 
         });
 
