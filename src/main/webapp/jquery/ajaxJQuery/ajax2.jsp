@@ -23,7 +23,13 @@
             method:method,
             dataType:dataType,
             success:function(data){//Ajax통신 Success
+                //{"no":1,"name":"Spring","age":34}
+
                 console.log(data);
+                //console.log(data.no+" "+data.name+" "+data.age);
+                //console.log(data["no"]+" "+data["name"]+" "+data["age"]);
+
+
             },
             error:function(data){//Ajax통신이 Fail
                 console.log(data);
