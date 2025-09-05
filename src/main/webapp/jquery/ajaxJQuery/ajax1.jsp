@@ -22,12 +22,12 @@
                         dataType:"text",
                         contentType:"text/html;charset=UTF-8",
                         success:function(data){
+                            $("#app").text(data);
 
                         },
                         error:function(data){
-
+                            $("#app").text("에러: " + xhr.status);
                         }
-
                     }
                 )
             });
